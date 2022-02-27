@@ -21,3 +21,6 @@ set wildmenu
 set hlsearch
 "ステータスライン
 set laststatus=2
+
+"カラースキーム
+colorscheme molokai
