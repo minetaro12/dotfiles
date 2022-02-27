@@ -24,3 +24,8 @@ set laststatus=2
 
 "カラースキーム
 colorscheme molokai
+
+"plugin
+call plug#begin()
+Plug 'itchyny/lightline.vim'
+call plug#end()
