@@ -28,4 +28,5 @@ colorscheme molokai
 "plugin
 call plug#begin()
 Plug 'itchyny/lightline.vim'
+let g:lightline = { 'colorscheme': 'wombat' }
 call plug#end()
