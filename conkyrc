@@ -1,0 +1,63 @@
+conky.config = {
+  use_spacer = 'left',
+  pad_percents = 3,
+  background = true,
+  double_buffer = true,
+  font = 'Source Code Pro:size=10',
+  use_xft = true,
+  alignment = 'top_right',
+  gap_x = 10,
+  gap_y = 10,
+  own_window = true,
+  own_window_transparent = false,
+  own_window_argb_value = 80,
+  own_window_type = 'normal',
+  own_window_hints = 'undecorated,below,sticky,skip_taskbar,skip_pager',
+  own_window_argb_visual = true,
+  own_window_colour = 'black',
+  update_interval = 1.0,
+}
+
+conky.text = [[
+${color lightskyblue}Hostname: ${color}${nodename}
+${color lightskyblue}Kernel:   ${color}${sysname} ${kernel} on ${machine}
+${color lightskyblue}Uptime:   ${color}${uptime}
+${hr}
+${color lightskyblue}CPU:${color} ${freq_g} GHz ${cpu cpu0}%
+${color lightskyblue}01:${color} ${cpu cpu1}% ${cpubar cpu1}
+${color lightskyblue}02:${color} ${cpu cpu2}% ${cpubar cpu2}
+${color lightskyblue}03:${color} ${cpu cpu3}% ${cpubar cpu3}
+${color lightskyblue}04:${color} ${cpu cpu4}% ${cpubar cpu4}
+${color lightskyblue}05:${color} ${cpu cpu5}% ${cpubar cpu5}
+${color lightskyblue}06:${color} ${cpu cpu6}% ${cpubar cpu6}
+${color lightskyblue}07:${color} ${cpu cpu7}% ${cpubar cpu7}
+${color lightskyblue}08:${color} ${cpu cpu8}% ${cpubar cpu8}
+${color lightskyblue}09:${color} ${cpu cpu9}% ${cpubar cpu9}
+${color lightskyblue}10:${color} ${cpu cpu10}% ${cpubar cpu10}
+${color lightskyblue}11:${color} ${cpu cpu11}% ${cpubar cpu11}
+${color lightskyblue}12:${color} ${cpu cpu12}% ${cpubar cpu12}
+${color lightskyblue}13:${color} ${cpu cpu13}% ${cpubar cpu13}
+${color lightskyblue}14:${color} ${cpu cpu14}% ${cpubar cpu14}
+${color lightskyblue}15:${color} ${cpu cpu15}% ${cpubar cpu15}
+${color lightskyblue}16:${color} ${cpu cpu16}% ${cpubar cpu16}
+${cpugraph}
+${color lightskyblue}Name                 PID    CPU%   MEM%
+${color lightgrey} ${top name 1} ${top pid 1} ${top cpu 1} ${top mem 1}
+${color lightgrey} ${top name 2} ${top pid 2} ${top cpu 2} ${top mem 2}
+${color lightgrey} ${top name 3} ${top pid 3} ${top cpu 3} ${top mem 3}
+${color lightgrey} ${top name 4} ${top pid 4} ${top cpu 4} ${top mem 4}
+${color lightskyblue}Load average: ${color}${loadavg}
+${color lightskyblue}Processes: ${color}${processes}
+${color lightskyblue}Running:${color} ${running_processes}
+${hr}
+${color lightskyblue}RAM:  ${color}${mem}/${memmax}
+${memperc}% ${membar 4}
+${memgraph}
+${hr}
+${color lightskyblue}Disk: ${color}${fs_used /}/${fs_size /} ${fs_bar 6 /}
+${color lightskyblue}Read: ${color}${diskio_read /dev/nvme0n1p6}      ${color lightskyblue}Write: ${color}${diskio_write /dev/nvme0n1p6}
+${hr}
+${color lightskyblue}IP:   ${color}${addr wlp1s0}
+${color lightskyblue}Up:   ${color}${upspeed wlp1s0}      ${color lightskyblue}TotalUp:   ${color}${totalup wlp1s0}
+${color lightskyblue}Down: ${color}${downspeed wlp1s0}      ${color lightskyblue}TotalDown: ${color}${totaldown wlp1s0}
+]]
