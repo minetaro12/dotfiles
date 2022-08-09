@@ -2,7 +2,7 @@
 curlとfishがインストールされている必要があります
 
 ```
-curl https://raw.githubusercontent.com/minetaro12/dotfiles/master/install-fish.sh | sh
+curl https://raw.githubusercontent.com/minetaro12/dotfiles/master/install-fish.sh | fish
 curl -L 0sn.net/fish | fish
 ```
 
