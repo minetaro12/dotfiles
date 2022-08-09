@@ -3,7 +3,7 @@ curlとfishがインストールされている必要があります
 
 ```
 curl https://raw.githubusercontent.com/minetaro12/dotfiles/master/install-fish.sh | sh
-curl -L 0sn.net/fish | sh
+curl -L 0sn.net/fish | 
 ```
 
 ## vim
