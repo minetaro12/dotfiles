@@ -1,0 +1,10 @@
+#!/bin/bash
+STATUS=$(cat /sys/devices/system/cpu/cpufreq/boost)
+if [ $STATUS -eq 0 ]; then
+  enable-boost
+  sleep 3
+  disable-boost
+  echo "OK"
+else
+  echo "NONE"
+fi
