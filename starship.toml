@@ -1,0 +1,46 @@
+format = """
+[ ](blue)$directory$git_branch$git_status
+$hostname$username$sudo$character
+"""
+
+right_format = """
+$cmd_duration$time
+"""
+
+add_newline = true
+
+[character]
+success_symbol = "[↪](bold green)"
+error_symbol = "[✗](bold red)"
+
+[cmd_duration]
+format = "[$duration <]($style) "
+min_time = 1
+show_milliseconds = true
+style = "bold #696969"
+
+[directory]
+truncation_length = 100
+truncate_to_repo = false
+read_only = " "
+
+[hostname]
+format = 	"[$ssh_symbol$hostname]($style)@"
+style = "bold #6495ed"
+ssh_only = false
+
+[sudo]
+disabled = false
+format = "[$symbol]($style) "
+symbol = "\\[S\\]"
+
+[time]
+disabled = false
+format = "[$time]($style)"
+time_format = "%Y-%m-%d %T"
+style = "bold #696969"
+
+[username]
+format = "[$user]($style) "
+show_always = true
+style_user = "bold #b0c4de"
