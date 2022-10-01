@@ -24,6 +24,23 @@ truncation_length = 100
 truncate_to_repo = false
 read_only = " "
 
+[git_branch]
+style = "bold #adff2f"
+
+[git_status]
+format = "[$all_status$ahead_behind]($style) "
+conflicted = '\[=\]'
+ahead = '[\[⇡\]](bold #adff2f)'
+behind = '\[⇣\]'
+diverged = '\[⇕\]'
+up_to_date = ""
+untracked = '\[?\]'
+stashed = '\[$\]'
+modified= '\[!\]'
+staged = '[\[+\]](bold #ffa500)'
+renamed = '[\[»\]](bold #ffa500)'
+deleted = '\[✘\]'
+
 [hostname]
 format = 	"[$ssh_symbol$hostname]($style)@"
 style = "bold #6495ed"
