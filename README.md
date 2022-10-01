@@ -10,6 +10,6 @@ curl -L 0sn.net/fish | fish
 curlとvimがインストールされている必要があります
 
 ```
-curl https://raw.githubusercontent.com/minetaro12/dotfiles/master/install-vimrc.sh | sh
-curl -L 0sn.net/vim | sh
+curl https://raw.githubusercontent.com/minetaro12/dotfiles/master/install-vimrc.sh | bash
+curl -L 0sn.net/vim | bash
 ```
