@@ -23,6 +23,8 @@ set hlsearch
 set laststatus=2
 " マウス
 set mouse=a
+"ヘルプの言語
+set helplang=ja,en
 
 "カラースキーム
 colorscheme molokai
@@ -30,5 +32,7 @@ colorscheme molokai
 "plugin
 call plug#begin()
 Plug 'itchyny/lightline.vim'
-let g:lightline = { 'colorscheme': 'wombat' }
+"let g:lightline = { 'colorscheme': 'wombat' }
+Plug 'vim-jp/vimdoc-ja'
+Plug 'scrooloose/nerdtree'
 call plug#end()
