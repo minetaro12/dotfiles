@@ -33,6 +33,7 @@ Plug 'itchyny/lightline.vim'
 Plug 'vim-jp/vimdoc-ja'
 Plug 'scrooloose/nerdtree'
 Plug 'tomasr/molokai'
+Plug 'lifepillar/vim-solarized8'
 call plug#end()
 
 "カラースキーム
