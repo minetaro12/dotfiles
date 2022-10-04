@@ -26,13 +26,14 @@ set mouse=a
 "ヘルプの言語
 set helplang=ja,en
 
-"カラースキーム
-colorscheme molokai
-
 "plugin
 call plug#begin()
 Plug 'itchyny/lightline.vim'
 "let g:lightline = { 'colorscheme': 'wombat' }
 Plug 'vim-jp/vimdoc-ja'
 Plug 'scrooloose/nerdtree'
+Plug 'tomasr/molokai'
 call plug#end()
+
+"カラースキーム
+colorscheme molokai
