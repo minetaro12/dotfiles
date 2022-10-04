@@ -1,6 +1,6 @@
 #!/bin/bash
 
-srcdir=$(dirname $0)
+srcdir=$(cd $(dirname $0); pwd)
 
 # .vimrc
 if [ -e ${HOME}/.vimrc ]; then
