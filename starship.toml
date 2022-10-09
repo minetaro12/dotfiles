@@ -1,6 +1,6 @@
 format = """
 [ ](blue)$directory$git_branch$git_status
-$hostname$username$sudo$character
+$username$hostname$sudo$character
 """
 
 right_format = """
@@ -42,7 +42,7 @@ renamed = '[\[»\]](bold #ffa500)'
 deleted = '\[✘\]'
 
 [hostname]
-format = 	"[$ssh_symbol$hostname]($style)@"
+format = 	"@[$ssh_symbol$hostname]($style) "
 style = "bold #6495ed"
 ssh_only = false
 
@@ -58,6 +58,6 @@ time_format = "%Y-%m-%d %T"
 style = "bold #696969"
 
 [username]
-format = "[$user]($style) "
+format = "[$user]($style)"
 show_always = true
 style_user = "bold #b0c4de"

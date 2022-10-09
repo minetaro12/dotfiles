@@ -60,7 +60,7 @@ ${hr}
 ${color1}Disk: ${color0}${fs_used /}/${fs_size /} ${fs_bar 6 /}
 ${color1}Read: ${color0}${diskio_read /dev/nvme0n1p6}      ${color1}Write: ${color0}${diskio_write /dev/nvme0n1p6}
 ${hr}
-${color1}IP:   ${color0}${addr wlp1s0}
-${color1}Up:   ${color0}${upspeed wlp1s0}      ${color1}TotalUp:   ${color0}${totalup wlp1s0}
-${color1}Down: ${color0}${downspeed wlp1s0}      ${color1}TotalDown: ${color0}${totaldown wlp1s0}
+${color1}IP:   ${color0}${addr wlan0}
+${color1}Up:   ${color0}${upspeed wlan0}      ${color1}TotalUp:   ${color0}${totalup wlan0}
+${color1}Down: ${color0}${downspeed wlan0}      ${color1}TotalDown: ${color0}${totaldown wlan0}
 ]]
