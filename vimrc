@@ -23,6 +23,7 @@ set hlsearch
 set laststatus=2
 " マウス
 set mouse=a
+set ttymouse=sgr
 "ヘルプの言語
 set helplang=ja,en
 
