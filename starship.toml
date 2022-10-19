@@ -14,10 +14,10 @@ success_symbol = "[↪](bold green)"
 error_symbol = "[✗](bold red)"
 
 [cmd_duration]
-format = "[$duration <]($style) "
-min_time = 1
+format = "[](#2a7fad)[ $duration ]($style)"
+min_time = 0
 show_milliseconds = true
-style = "bold #696969"
+style = "bg:#2a7fad bold #ffffff"
 
 [directory]
 truncation_length = 100
@@ -53,9 +53,9 @@ symbol = "\\[S\\]"
 
 [time]
 disabled = false
-format = "[$time]($style)"
+format = "[](bg:#2a7fad #ffffff)[ $time]($style)"
 time_format = "%Y-%m-%d %T"
-style = "bold #696969"
+style = "bg:#ffffff bold #696969"
 
 [username]
 format = "[$user]($style)"
