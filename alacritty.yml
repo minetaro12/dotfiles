@@ -4,19 +4,19 @@
 font:
   size: 10.0
   normal:
-    family: SauceCodePro NF
+    family: Hack
     style: Regular
 
   bold:
-    family: SauceCodePro NF
+    family: Hack
     style: Bold
 
   italic:
-    family: SauceCodePro NF
+    family: Hack
     style: Italic
 
   bold_italic:
-    family: SauceCodePro NF
+    family: Hack
     style: Bold Italic
 
 # Colors (Tomorrow Night Bright)
