@@ -198,6 +198,7 @@ exec --no-startup-id /usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1
 exec --no-startup-id /usr/lib/xfce4/notifyd/xfce4-notifyd
 exec --no-startup-id conky -d
 exec --no-startup-id picom -b
+exec --no-startup-id xmodmap -e "keycode 101 = Super_L"
 
 set $Locker light-locker-command -l && sleep 1
 
@@ -219,6 +220,7 @@ bindsym $mod+F4 mode "$mode_system"
 bindsym button2 kill
 bindsym Mod1+F4 kill
 bindsym Mod1+space exec --no-startup-id rofi -show drun -show-icons
+bindsym Mod1+Tab exec --no-startup-id rofi -show window
 bindsym button3 floating toggle
 bindsym Print exec gnome-screenshot -i 
 bindsym Shift+Print exec gnome-screenshot -a
