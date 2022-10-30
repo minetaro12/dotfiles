@@ -192,10 +192,12 @@ bar {
 exec --no-startup-id xfce4-power-manager
 exec --no-startup-id fcitx5
 exec --no-startup-id ~/.fehbg
-#exec --no-startup-id blueman-applet
+exec --no-startup-id blueman-applet
 exec --no-startup-id light-locker --lock-on-suspend
 exec --no-startup-id /usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1
 exec --no-startup-id /usr/lib/xfce4/notifyd/xfce4-notifyd
+exec --no-startup-id conky -d
+exec --no-startup-id picom -b
 
 set $Locker light-locker-command -l && sleep 1
 
@@ -219,7 +221,7 @@ bindsym Mod1+F4 kill
 bindsym Mod1+space exec --no-startup-id rofi -show drun -show-icons
 bindsym button3 floating toggle
 bindsym Print exec gnome-screenshot -i 
-bindsym $mod+Print exec gnome-screenshot -a
+bindsym Shift+Print exec gnome-screenshot -a
 
 for_window [class="mpv"] floating enable
 for_window [class="Pavucontrol"] floating enable
