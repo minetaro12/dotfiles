@@ -200,6 +200,7 @@ exec --no-startup-id conky -d
 exec --no-startup-id picom -b
 exec --no-startup-id xmodmap -e "keycode 101 = Super_L"
 
+#セッションメニュー
 set $Locker light-locker-command -l && sleep 1
 
 set $mode_system System (l) lock, (e) logout, (s) suspend, (r) reboot, (Shift+s) shutdown
@@ -217,6 +218,7 @@ mode "$mode_system" {
 }
 
 bindsym $mod+F4 mode "$mode_system"
+
 bindsym button2 kill
 bindsym Mod1+F4 kill
 bindsym Mod1+space exec --no-startup-id rofi -show drun -show-icons
@@ -225,9 +227,13 @@ bindsym button3 floating toggle
 bindsym Print exec gnome-screenshot -i 
 bindsym Shift+Print exec gnome-screenshot -a
 
+#デフォルトでフローティング表示
 for_window [class="mpv"] floating enable
 for_window [class="Pavucontrol"] floating enable
 for_window [class="Viewnior"] floating enable
+
+#ワークスペース
+assign [class="discord"] workspace 3
 
 #gaps top 5
 #gaps bottom 5
