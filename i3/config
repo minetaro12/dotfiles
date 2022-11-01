@@ -233,6 +233,8 @@ bindsym Shift+Print exec gnome-screenshot -a
 for_window [class="mpv"] floating enable
 for_window [class="Pavucontrol"] floating enable
 for_window [class="Viewnior"] floating enable
+for_window [class="Gnome-screenshot"] floating enable
+
 
 #ワークスペース
 assign [class="discord"] workspace 3
