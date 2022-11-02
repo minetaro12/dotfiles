@@ -1,15 +1,26 @@
-## fish
-curlとfishがインストールされている必要があります
+## vimrcとtmux.confのインストール
+`bash ./ln.sh`
 
-```
-curl https://raw.githubusercontent.com/minetaro12/dotfiles/master/install-fish.sh | fish
-curl -L 0sn.net/fish | fish
-```
+## i3configとpolybarのインストール
 
-## vim
-curlとvimがインストールされている必要があります
+### フォント
+`Hack Nerd Font`と`SauceCodePro Nerd Font`のインストールが必要です
 
-```
-curl https://raw.githubusercontent.com/minetaro12/dotfiles/master/install-vimrc.sh | bash
-curl -L 0sn.net/vim | bash
-```
+### 必要なパッケージ
+
+- xfce4-power-manager
+- fcitx5
+- feh
+- blueman
+- light-locker
+- polkit
+- polkit-gnome
+- xfce4-notifyd
+- conky
+- picom
+- networkd-notify (https://gitlab.com/wavexx/networkd-notify)
+- polybar
+- gnome-screenshot
+- rofi
+- pavucontrol
+- playerctl
