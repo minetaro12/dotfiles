@@ -202,9 +202,9 @@ exec --no-startup-id sleep 5;xmodmap -e "keycode 101 = Super_L"
 exec --no-startup-id sleep 5;networkd-notify
 exec_always --no-startup-id ~/.config/polybar/launch.sh
 
-#セッションメニュー
 set $Locker light-locker-command -l && sleep 1
 
+#セッションメニュー
 set $mode_system System (l) lock, (e) logout, (s) suspend, (r) reboot, (Shift+s) shutdown
 mode "$mode_system" {
     bindsym l exec --no-startup-id $Locker, mode "default"
@@ -221,6 +221,21 @@ mode "$mode_system" {
 
 bindsym $mod+F4 mode "$mode_system"
 
+#電源設定メニュー
+set $mode_power (e) enable-boost, (d) disable-boost, (E) enable-battery-care, (D) disable-battery-care
+mode "$mode_power" {
+    bindsym e exec --no-startup-id sudo enable-boost, mode "default"
+    bindsym d exec --no-startup-id sudo disable-boost, mode "default"
+    bindsym Shift+e exec --no-startup-id sudo enable-battery-care, mode "default"
+    bindsym Shift+d exec --no-startup-id sudo disable-battery-care, mode "default"
+
+    # back to normal: Enter or Escape
+    bindsym Return mode "default"
+    bindsym Escape mode "default"
+}
+
+bindsym $mod+p mode "$mode_power"
+
 bindsym button2 kill
 bindsym Mod1+F4 kill
 bindsym Mod1+space exec --no-startup-id rofi -show drun -show-icons
@@ -235,7 +250,6 @@ for_window [class="Pavucontrol"] floating enable
 for_window [class="Viewnior"] floating enable
 for_window [class="Gnome-screenshot"] floating enable
 
-
 #ワークスペース
 assign [class="discord"] workspace 3
 
@@ -244,3 +258,6 @@ assign [class="discord"] workspace 3
 #gaps right 5
 #gaps left 5
 #gaps inner 5
+
+#タイトルを中央に
+title_align center
