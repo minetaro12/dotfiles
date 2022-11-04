@@ -1,0 +1,27 @@
+#!/bin/bash
+
+current=$(cat /sys/class/power_supply/ADP1/online)
+
+if [[ "$current" = "1" ]]; then
+  echo "AC detected: enable boost"
+  enable-boost
+else
+  echo "BT detected: disable boost"
+  disable-boost
+fi
+
+while true
+do
+  now=$(cat /sys/class/power_supply/ADP1/online)
+  if [[ "$current" != "$now" ]]; then
+    if [[ "$now" = "1" ]]; then
+      echo "AC detected: enable boost"
+      enable-boost
+    else
+      echo "BT detected: disable boost"
+      disable-boost
+    fi
+    current=$now
+  fi
+  sleep 1
+done
