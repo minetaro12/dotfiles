@@ -200,7 +200,6 @@ exec --no-startup-id conky -d
 exec --no-startup-id picom -b --experimental-backends
 exec --no-startup-id sleep 5;xmodmap -e "keycode 101 = Super_L"
 exec --no-startup-id sleep 5;networkd-notify
-exec --no-startup-id sudo autoboost
 exec_always --no-startup-id ~/.config/polybar/launch.sh
 
 set $Locker light-locker-command -l && sleep 1
