@@ -246,9 +246,11 @@ bindsym Shift+Print exec gnome-screenshot -a
 
 #デフォルトでフローティング表示
 for_window [class="mpv"] floating enable
+for_window [class="mpv"] sticky enable
 for_window [class="Pavucontrol"] floating enable
 for_window [class="Viewnior"] floating enable
 for_window [class="Gnome-screenshot"] floating enable
+for_window [class="Ristretto"] floating enable
 
 #ワークスペース
 assign [class="discord"] workspace 3
