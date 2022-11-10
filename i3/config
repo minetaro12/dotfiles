@@ -256,11 +256,11 @@ for_window [class="Ristretto"] floating enable
 #ワークスペース
 assign [class="discord"] workspace 3
 
-#gaps top 5
-#gaps bottom 5
-#gaps right 5
-#gaps left 5
-#gaps inner 5
+gaps top 5
+gaps bottom 5
+gaps right 5
+gaps left 5
+gaps inner 5
 
 #タイトルを中央に
 title_align center
