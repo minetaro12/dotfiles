@@ -252,6 +252,7 @@ for_window [class="Pavucontrol"] floating enable
 for_window [class="Viewnior"] floating enable
 for_window [class="Gnome-screenshot"] floating enable
 for_window [class="Ristretto"] floating enable
+for_window [title="ピクチャーインピクチャー"] sticky enable
 
 #ワークスペース
 assign [class="discord"] workspace 3

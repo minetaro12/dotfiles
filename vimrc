@@ -27,6 +27,9 @@ set ttymouse=sgr
 "ヘルプの言語
 set helplang=ja,en
 
+set noshowmode
+set timeoutlen=0
+
 "plugin
 call plug#begin()
 Plug 'itchyny/lightline.vim'
@@ -35,6 +38,7 @@ Plug 'vim-jp/vimdoc-ja'
 Plug 'scrooloose/nerdtree'
 Plug 'tomasr/molokai'
 Plug 'lifepillar/vim-solarized8'
+Plug 'mattn/vim-yoshi'
 call plug#end()
 
 "カラースキーム
