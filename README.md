@@ -24,3 +24,4 @@
 - rofi
 - pavucontrol
 - playerctl
+- jgmenu
