@@ -253,6 +253,7 @@ for_window [class="Viewnior"] floating enable
 for_window [class="Gnome-screenshot"] floating enable
 for_window [class="Ristretto"] floating enable
 for_window [title="ピクチャーインピクチャー"] sticky enable
+for_window [title="Headset - Player"] floating enable
 
 #ワークスペース
 assign [class="discord"] workspace 3
