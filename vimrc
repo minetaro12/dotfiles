@@ -37,9 +37,10 @@ Plug 'itchyny/lightline.vim'
 Plug 'vim-jp/vimdoc-ja'
 Plug 'scrooloose/nerdtree'
 Plug 'tomasr/molokai'
-Plug 'lifepillar/vim-solarized8'
+Plug 'morhetz/gruvbox'
 Plug 'mattn/vim-yoshi'
 call plug#end()
 
 "カラースキーム
-colorscheme molokai
+set background=dark
+colorscheme gruvbox
