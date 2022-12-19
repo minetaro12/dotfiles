@@ -198,7 +198,7 @@ exec --no-startup-id /usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1
 exec --no-startup-id /usr/lib/xfce4/notifyd/xfce4-notifyd
 exec --no-startup-id conky -d
 exec --no-startup-id picom -b
-exec --no-startup-id sleep 5;xmodmap -e "keycode 101 = Super_L"
+exec_always --no-startup-id sleep 5;xmodmap -e "keycode 101 = Super_L"
 exec --no-startup-id sleep 5;networkd-notify
 exec --no-startup-id parcellite
 exec_always --no-startup-id ~/.config/polybar/launch.sh
