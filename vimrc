@@ -38,7 +38,6 @@ Plug 'vim-jp/vimdoc-ja'
 Plug 'scrooloose/nerdtree'
 Plug 'tomasr/molokai'
 Plug 'morhetz/gruvbox'
-Plug 'mattn/vim-yoshi'
 call plug#end()
 
 "カラースキーム
