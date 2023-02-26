@@ -193,17 +193,16 @@ exec --no-startup-id xfce4-power-manager
 exec --no-startup-id fcitx5
 exec --no-startup-id ~/.fehbg
 exec --no-startup-id blueman-applet
-exec --no-startup-id light-locker --lock-on-suspend
 exec --no-startup-id /usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1
 exec --no-startup-id /usr/lib/xfce4/notifyd/xfce4-notifyd
-exec --no-startup-id conky -d
+#exec --no-startup-id conky -d
 exec --no-startup-id picom -b
 exec_always --no-startup-id sleep 5;xmodmap -e "keycode 101 = Super_L"
-exec --no-startup-id sleep 5;networkd-notify
+#exec --no-startup-id sleep 5;networkd-notify
 exec --no-startup-id parcellite
 exec_always --no-startup-id ~/.config/polybar/launch.sh
 
-set $Locker light-locker-command -l && sleep 1
+set $Locker sh ~/.config/i3/lock.sh && sleep 1
 
 #セッションメニュー
 set $mode_system System (l) lock, (e) logout, (s) suspend, (r) reboot, (Shift+s) shutdown

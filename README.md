@@ -12,7 +12,6 @@
 - fcitx5
 - feh
 - blueman
-- light-locker
 - polkit
 - polkit-gnome
 - xfce4-notifyd
@@ -25,3 +24,4 @@
 - pavucontrol
 - playerctl
 - jgmenu
+- i3lock-color
