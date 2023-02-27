@@ -189,6 +189,7 @@ bindsym $mod+r mode "resize"
 #        status_command i3blocks
 #}
 
+#スタートアップ
 exec --no-startup-id xfce4-power-manager
 exec --no-startup-id fcitx5
 exec --no-startup-id ~/.fehbg
@@ -200,6 +201,8 @@ exec --no-startup-id picom -b
 exec_always --no-startup-id sleep 5;xmodmap -e "keycode 101 = Super_L"
 #exec --no-startup-id sleep 5;networkd-notify
 exec --no-startup-id parcellite
+
+#polybar起動
 exec_always --no-startup-id ~/.config/polybar/launch.sh
 
 set $Locker sh ~/.config/i3/lock.sh && sleep 1
@@ -207,10 +210,9 @@ set $Locker sh ~/.config/i3/lock.sh && sleep 1
 #セッションメニュー
 set $mode_system System (l) lock, (e) logout, (s) suspend, (r) reboot, (Shift+s) shutdown
 mode "$mode_system" {
-    bindsym l exec --no-startup-id $Locker, mode "default"
+    bindsym l exec --no-startup-id sleep 0.5 && $Locker && xset dpms force standby, mode "default"
     bindsym e exec --no-startup-id i3-msg exit, mode "default"
     bindsym s exec --no-startup-id $Locker && systemctl suspend, mode "default"
-    #bindsym h exec --no-startup-id $Locker && systemctl hibernate, mode "default"
     bindsym r exec --no-startup-id systemctl reboot, mode "default"
     bindsym Shift+s exec --no-startup-id systemctl poweroff -i, mode "default"
 
@@ -236,13 +238,24 @@ mode "$mode_power" {
 
 bindsym $mod+p mode "$mode_power"
 
+#中ボタンで閉じる
 bindsym button2 kill
+
+#Alt+F4で閉じる
 bindsym Mod1+F4 kill
+
+#ランチャー
 bindsym Mod1+space exec --no-startup-id rofi -show drun -show-icons
+
+#Alt+Tabでウィンドウ切り替え
 bindsym Mod1+Tab exec --no-startup-id rofi -show window
+
+#タイトルバー右クリックでフローティング
 bindsym button3 floating toggle
-bindsym Print exec gnome-screenshot -i 
-bindsym Shift+Print exec gnome-screenshot -a
+
+#スクリーンショット
+bindsym Print exec --no-startup-id gnome-screenshot -i 
+bindsym Shift+Print --no-startup-id exec gnome-screenshot -a
 
 #デフォルトでフローティング表示
 for_window [class="mpv"] floating enable
@@ -257,12 +270,19 @@ for_window [title="Headset - Player"] floating enable
 #ワークスペース
 assign [class="discord"] workspace 3
 
-gaps top 5
-gaps bottom 5
-gaps right 5
-gaps left 5
-gaps inner 5
+#gaps top 5
+#gaps bottom 5
+#gaps right 5
+#gaps left 5
+#gaps inner 5
 
 #タイトルを中央に
 title_align center
 client.focused #205a88 #205a88 #FFFFFF #aabfe2 #223a63
+
+#Chromeのタイトルバーを非表示
+#for_window [class="Google-chrome"] border pixel 1
+
+#タイトルバーの非表示
+default_border pixel 1
+default_floating_border pixel 1

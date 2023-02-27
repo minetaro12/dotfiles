@@ -32,5 +32,4 @@ i3lock \
 --clock \
 --indicator \
 --time-str="%H:%M:%S" \
---date-str="%Y-%m-%d" \
---keylayout 1 \
+--date-str="%Y-%m-%d"

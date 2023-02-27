@@ -3,7 +3,7 @@
 
 list=(
   ##  Lock  ##
-  "Lock Screen"  "light-locker-command -l"
+  "Lock Screen"  "sleep 0.5 && sh ~/.config/i3/lock.sh && xset dpms force standby"
   "Logout"       "i3-msg exit"
   ##  Power ##
   "Reboot"       "systemctl reboot"
