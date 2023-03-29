@@ -42,4 +42,4 @@ call plug#end()
 
 "カラースキーム
 set background=dark
-colorscheme gruvbox
+colorscheme koehler
