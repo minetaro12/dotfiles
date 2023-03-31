@@ -1,0 +1,3 @@
+ログアウト,openbox --exit,system-log-out
+再起動,systemctl reboot,system-reboot
+シャットダウン,systemctl poweroff,system-shutdown
