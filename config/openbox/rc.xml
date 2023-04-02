@@ -348,6 +348,12 @@
         <command>alacritty</command>
       </action>
     </keybind>
+    <!-- reload config -->
+    <keybind key="W-S-r">
+      <action name="Execute">
+        <command>openbox --reconfigure</command>
+      </action>
+    </keybind>
     <!-- window snap -->
     <keybind key="W-Left">
       <action name="UnmaximizeFull"/>
