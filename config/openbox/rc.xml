@@ -350,8 +350,12 @@
     </keybind>
     <!-- reload config -->
     <keybind key="W-S-r">
+      <action name="Reconfigure"/>
+    </keybind>
+    <!-- screenshot -->
+    <keybind key="Print">
       <action name="Execute">
-        <command>openbox --reconfigure</command>
+        <command>gnome-screenshot -i</command>
       </action>
     </keybind>
     <!-- window snap -->
