@@ -108,8 +108,13 @@ our $SCHEMA = [
     # {item => ['oblogout', 'Exit', 'application-exit']},
 
     ## Reboot option
-    {item => ['systemctl reboot', 'Reboot', 'system-reboot']},
+    # {item => ['systemctl reboot', 'Reboot', 'system-reboot']},
 
     ## Poweroff option
-    {item => ['systemctl poweroff', 'Poweroff', 'system-shutdown']}
+    # {item => ['systemctl poweroff', 'Poweroff', 'system-shutdown']},
+
+    {beg => ['PowerMenu', 'system-shutdown']},
+      {item => ['systemctl reboot', 'Reboot', 'system-reboot']},
+      {item => ['systemctl poweroff', 'Poweroff', 'system-shutdown']},
+    {end => undef},
 ]
