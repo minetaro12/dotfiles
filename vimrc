@@ -4,7 +4,7 @@ syntax on
 "折り返さない
 set nowrap
 "カーソルがある行の表示
-set cursorline
+" set cursorline
 "インデント
 set smartindent
 "タブ幅をスペース2つに
@@ -26,14 +26,15 @@ set mouse=a
 set ttymouse=sgr
 "ヘルプの言語
 set helplang=ja,en
-
+" GUIモードのフォント
+set guifont=Cascadia_Code:h10
 set noshowmode
 set timeoutlen=0
 
 "plugin
 call plug#begin()
 Plug 'itchyny/lightline.vim'
-"let g:lightline = { 'colorscheme': 'wombat' }
+" let g:lightline = { 'colorscheme': 'wombat' }
 Plug 'vim-jp/vimdoc-ja'
 Plug 'scrooloose/nerdtree'
 Plug 'tomasr/molokai'
