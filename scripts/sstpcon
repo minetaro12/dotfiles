@@ -1,0 +1,26 @@
+#!/bin/bash
+
+# ルートユーザーで実行されているか確認
+if [ "$(id -u)" != 0 ]; then
+  echo "Run as root user"
+  exit 1
+fi
+
+# 引数から設定フアイルを読み込む
+if [ "$1" = "" ]; then
+  echo "Usage: sstpcon <config file>"
+  exit 1
+fi
+source "$1"
+
+(sleep 5 && ip route add default dev ppp0)&
+
+sstpc \
+  --save-server-route \
+  --ca-path /etc/ssl/certs \
+  --log-level 2 \
+  --log-stdout \
+  --user "${USER}" \
+  --password "${PASSWORD}" \
+  "${HOST}" \
+  noauth

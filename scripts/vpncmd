@@ -1,0 +1,32 @@
+#!/bin/bash
+
+CHECK_ERROR() {
+  if [ $? != 0 ]; then
+    exit 1
+  fi
+}
+
+VPNCMD="/usr/local/vpnclient/vpncmd"
+IFNAME="vpn_vpn0"
+GATEWAY="$(ip route | grep default | head -n1 | awk '{print $3}')"
+
+
+# ルートユーザーで実行されているか確認
+if [ "$(id -u)" != 0 ]; then
+  echo "Run as root user"
+  exit 1
+fi
+
+if [[ "$1" = "ls" || "$1" = "list" ]]; then
+  ${VPNCMD} -client localhost -cmd accountlist
+elif [ "$1" = "up" ]; then
+  ${VPNCMD} -client localhost -cmd accountconnect "$2"
+  CHECK_ERROR
+  dhcpcd -G "$IFNAME"
+elif [ "$1" = "down" ]; then
+  ${VPNCMD} -client localhost -cmd accountdisconnect "$2"
+  CHECK_ERROR
+  dhcpcd --release "$IFNAME"
+else
+  ${VPNCMD} "$@"
+fi
