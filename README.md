@@ -4,7 +4,7 @@
 ## i3configとpolybarのインストール
 
 ### フォント
-`Hack Nerd Font`と`SauceCodePro Nerd Font`のインストールが必要です
+`Hack Nerd Font`のインストールが必要です
 
 ### 必要なパッケージ
 
