@@ -22,7 +22,7 @@ if [[ "$1" = "ls" || "$1" = "list" ]]; then
 elif [ "$1" = "up" ]; then
   ${VPNCMD} -client localhost -cmd accountconnect "$2"
   CHECK_ERROR
-  dhcpcd -G "$IFNAME"
+  dhcpcd -G "$IFNAME" -C resolv.conf "$IFNAME"
 elif [ "$1" = "down" ]; then
   ${VPNCMD} -client localhost -cmd accountdisconnect "$2"
   CHECK_ERROR
